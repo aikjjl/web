@@ -3,4 +3,5 @@
 #动态请求用apache ，nginx 做静态和反向
 
 #apache
-FROM
+FROM centos
+11

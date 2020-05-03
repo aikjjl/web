@@ -27,6 +27,7 @@ CMD ["/run_sshd.sh"]
 WORKDIR /usr/src
 RUN yum install -y wget \
 && yum install -y gcc make apr-devel apr apr-util apr-util-devel pcre-devel \
+&& dnf install redhat-rpm-config -y \
 && tar zxf httpd-2.4.43.tar.gz
 WORKDIR httpd-2.4.4
 #自定义安装位置，模块

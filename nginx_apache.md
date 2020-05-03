@@ -41,6 +41,3 @@ RUN ./configure --prefix=/usr/local/apache2 --enable-mods-shared=most --enable-s
 && chmod +x /run_httpd.sh
 EXPOSE 80
 CMD ["/run_httpd.sh"]
-
-
-

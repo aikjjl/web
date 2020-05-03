@@ -37,7 +37,7 @@ RUN ./configure --prefix=/usr/local/apache2 --enable-mods-shared=most --enable-s
 && sed -i 's/#ServerName www.example.com:80/ServerName localhost:80/g' /usr/local/apache2/conf/httpd.conf \
 #启动apache服务
 && /usr/local/apache2/bin/httpd \
-&& echo -e "!#/bin/sh \n/usr/local/apache2/bin/httpd -D FOREGROUND" > /run_httpd.sh \
+&& echo -e "#!/bin/sh \n/usr/local/apache2/bin/httpd -D FOREGROUND" > /run_httpd.sh \
 && chmod +x /run_httpd.sh
 EXPOSE 80
 CMD ["/run_httpd.sh"]

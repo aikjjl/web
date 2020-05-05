@@ -1,4 +1,4 @@
-#ssh和nginx的静态web服务器
+#ssh和nginx
 #源码包http://nginx.org/
 FROM centos
 COPY ./nginx-1.18.0.tar.gz /usr/src

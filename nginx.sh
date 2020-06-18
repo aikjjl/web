@@ -24,6 +24,8 @@ https://blog.51cto.com/11134648/2130987
 nginx访问量统计
 
 
+
+
 PV(访问量)：即Page View, 即页面浏览量或点击量，用户每次刷新即被计算一次。
 UV(独立访客)：即Unique Visitor,访问您网站的一台电脑客户端为一个访客。00:00-24:00内相同的客户端只被计算一次。
 IP(独立IP)：即Internet Protocol,指独立IP数。00:00-24:00内相同IP地址之被计算一次。
@@ -64,3 +66,9 @@ cat /usr/local/nginx/logs/access.log | awk '{print $4,$7,$NF}' | awk -F '"' '{pr
 12.查看http的并发请求数与其TCP连接状态
 netstat -n | awk '/^tcp/ {++b[$NF]} END {for(a in b) print a,"\t",b[a]}'
 netstat -n | awk '/^tcp/ {++state[$NF]} END {for(key in state) print key,"\t",state[key]}'
+
+
+1，反向代理
+2，负载均衡
+3，动静分离
+4，高可用群集
